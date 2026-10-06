@@ -12,6 +12,7 @@ import {
   Home,
 } from 'lucide-react';
 import { NavigationConfig, NavSection } from '../../../types/documentation/navigation';
+import operonLogoWhite from '@/assets/operon-logo-white.png';
 import { documentationNavigationConfig } from '../../../config/documentation/navigation.config';
 
 export interface DocumentationSidebarProps {
@@ -177,8 +178,8 @@ export const DocumentationSidebar: React.FC<DocumentationSidebarProps> = ({
             {/* Drawer Header */}
             <div className="flex h-16 items-center justify-between border-b border-slate-200 px-4">
               <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-operon-600 text-white font-bold text-sm shadow-xs">
-                  <GraduationCap className="h-4 w-4" />
+                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-operon-600 shadow-xs p-1.5">
+                  <img src={operonLogoWhite} alt="Operon Logo" className="h-4 w-auto object-contain" />
                 </div>
                 <div className="flex flex-col">
                   <span className="font-bold text-slate-900 text-sm">Operon</span>

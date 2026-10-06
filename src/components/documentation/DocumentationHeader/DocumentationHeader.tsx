@@ -1,6 +1,7 @@
 import React from 'react';
-import { Search, Menu, X, BookOpen, ExternalLink, GraduationCap, HelpCircle } from 'lucide-react';
+import { Search, Menu, X, BookOpen, ExternalLink, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import operonLogoWhite from '@/assets/operon-logo-white.png';
 
 export interface DocumentationHeaderProps {
   onToggleMobileSidebar: () => void;
@@ -30,8 +31,8 @@ export const DocumentationHeader: React.FC<DocumentationHeaderProps> = ({
 
           <Link to="/docs" className="flex items-center gap-2.5 group">
             {/* Operon Emblem */}
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-operon-700 to-operon-500 text-white shadow-xs group-hover:scale-105 transition-transform duration-150">
-              <GraduationCap className="h-5 w-5" />
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-operon-700 to-operon-500 shadow-xs group-hover:scale-105 transition-transform duration-150 p-1.5">
+              <img src={operonLogoWhite} alt="Operon Logo" className="h-5 w-auto object-contain" />
             </div>
             
             <div className="flex flex-col">

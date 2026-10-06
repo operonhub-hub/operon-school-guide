@@ -12,6 +12,7 @@ import {
   HelpCircle,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import operonLogo from '@/assets/operon-logo.png';
 import { documentationNavigationConfig } from '../../config/documentation/navigation.config';
 
 const sectionIcons: Record<string, React.ElementType> = {
@@ -30,7 +31,7 @@ export const OverviewPage: React.FC = () => {
       <section className="relative overflow-hidden rounded-3xl border border-operon-100 bg-gradient-to-b from-operon-50/70 via-white to-slate-50/40 p-8 sm:p-10 lg:p-12 shadow-xs">
         <div className="relative z-10 max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-2 rounded-full bg-operon-100/70 px-3 py-1 text-xs font-bold uppercase tracking-wider text-operon-800 ring-1 ring-operon-600/10">
-            <GraduationCap className="h-4 w-4 text-operon-700" />
+            <img src={operonLogo} alt="" className="h-3.5 w-auto object-contain" />
             <span>Operon School Guide</span>
           </div>
 
@@ -62,8 +63,8 @@ export const OverviewPage: React.FC = () => {
         </div>
 
         {/* Subtle decorative background watermark */}
-        <div className="absolute right-4 -bottom-10 opacity-5 pointer-events-none hidden md:block">
-          <School className="h-64 w-64 text-operon-950" />
+        <div className="absolute right-4 -bottom-10 opacity-[0.07] pointer-events-none hidden md:block">
+          <img src={operonLogo} alt="" className="h-64 sm:h-72 w-auto object-contain select-none" />
         </div>
       </section>
 
